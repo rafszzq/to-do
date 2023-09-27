@@ -1,0 +1,12 @@
+*{
+    justify-content: center;
+}
+
+.Lista{
+    height: 300px;
+    color: azure;
+}
+.reverse{
+    display: flex;
+    flex-direction: column-reverse;
+}
