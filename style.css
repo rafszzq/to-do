@@ -1,12 +1,28 @@
 *{
     justify-content: center;
 }
-
-.Lista{
+.lista{
+  display: flex;
+  flex-direction: row;
+}
+#todo-list{ 
+  display: flex;
     height: 300px;
-    color: azure;
+    color: rgb(0, 0, 0);
+}
+#task{
+  display: flex;
+  flex-direction: row;
+  height: 4vh;
+  width:70vh;
+  margin-top: -230px;
+}
+.button{
+  cursor: pointer;
+  color: blue;
+  height: 5vh;
+  margin-top: -230px;
 }
 .reverse{
     display: flex;
     flex-direction: column-reverse;
-}
