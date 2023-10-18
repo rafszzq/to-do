@@ -1,21 +1,27 @@
-function addTask() {
-            const taskInput = document.getElementById("task");
-            const taskText = taskInput.value.trim();
+document.addEventListener("DOMContentLoaded", function() {
+    const taskList = document.getElementById("taskList");
+    const taskInput = document.getElementById("taskInput");
+    const addTaskButton = document.getElementById("addTask");
 
-            if (taskText !== "") {
-                const tasksList = document.getElementById("task");
-                const newTask = document.createElement("li");
-                newTask.innerHTML = `
-                    ${taskText}
-                    <button onclick="removeTask(this)">Remover</button>
-                `;
-                tasksList.appendChild(newTask);
-
-                taskInput.value = "";
-            }
+    addTaskButton.addEventListener("click", function() {
+        const taskText = taskInput.value.trim();
+        if (taskText !== "") {
+            const taskItem = document.createElement("li");
+            taskItem.textContent = taskText;
+            taskList.appendChild(taskItem);
+            taskInput.value = "";
         }
+    });
 
-        function removeTask(button) {
-            const taskToRemove = button.parentElement;
-            taskToRemove.remove();
+    taskInput.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            addTaskButton.click();
         }
+    });
+
+    taskList.addEventListener("click", function(event) {
+        if (event.target.tagName === "LI") {
+            event.target.classList.toggle("completed");
+        }
+    });
+});
