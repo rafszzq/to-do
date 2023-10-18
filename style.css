@@ -1,28 +1,39 @@
-*{
-    justify-content: center;
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
-.lista{
-  display: flex;
-  flex-direction: row;
+
+h1 {
+    color: #333;
 }
-#todo-list{ 
-  display: flex;
-    height: 300px;
-    color: rgb(0, 0, 0);
+
+.todo-container {
+    width: 300px;
+    margin: 0 auto;
+    text-align: left;
 }
-#task{
-  display: flex;
-  flex-direction: row;
-  height: 4vh;
-  width:70vh;
-  margin-top: -230px;
+
+.task{
+  height: 20px;
 }
-.button{
-  cursor: pointer;
-  color: blue;
-  height: 5vh;
-  margin-top: -230px;
+
+ul {
+    list-style-type: none;
+    padding: 0;
 }
-.reverse{
-    display: flex;
-    flex-direction: column-reverse;
+
+li {
+    margin: 5px 0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
